@@ -18,6 +18,5 @@ h1 {
 @media screen and (min-width: 480px) {
   div {
     float: left;
-    background: red;
   }
 }
