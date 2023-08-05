@@ -77,7 +77,7 @@ for i in range(40):
                         کد:
                     </th>
                     <td class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-600">
-
+                        {file_name}
                     </td>
                 </tr>
 
