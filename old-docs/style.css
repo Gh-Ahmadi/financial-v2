@@ -1,0 +1,22 @@
+.font-vazirmatn {
+  direction: rtl;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  /* margin: 200px; */
+  padding-top: 80px;
+  /* padding-right: 7%; */
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: x-large;
+}
+
+@media screen and (min-width: 480px) {
+  div {
+    float: left;
+  }
+}
