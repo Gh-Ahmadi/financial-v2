@@ -2,6 +2,7 @@ from django.db import models
 from users.models import *
 from django_jalali.db import models as jmodels
 from warehouse.models import *
+from django.urls import reverse
 
 from users.enum import Sizes
 
@@ -25,6 +26,7 @@ class Cut(models.Model):
         verbose_name="طول خط‌کشی", blank=True, null=True)
     code = models.CharField(
         max_length=4, verbose_name="کد برش", unique=True)
+    slug = models.SlugField(null=False, unique=False, default=1)
     model_code = models.CharField(
         max_length=4, verbose_name="کد مدل", blank=True, null=True, )
     date = jmodels.jDateField(verbose_name="تاریخ", blank=True, null=True)
@@ -46,7 +48,14 @@ class Cut(models.Model):
             return self.code
         else:
             return 'none'
-
+        
+    def get_absolute_url(self):
+        return reverse("cut_detail", kwargs={"slug": self.slug}) 
+    
+    def save(self, *args, **kwargs):  # new
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 # class CutCloth(models.Model):
 #     cut = models.OneToOneField(Cut, on_delete=models.CASCADE)
 #     cloth = models.ForeignKey(ClothRoll, on_delete=models.CASCADE)

@@ -69,6 +69,26 @@ class Account(models.Model):
 
         return f"{p4}"
 
+    def number_p1(self):
+        p1 = self.number[0:4]
+
+        return f"{p1}"
+
+    def number_p2(self):
+        p2 = self.number[4:8]
+
+        return f"{p2}"
+
+    def number_p3(self):
+        p3 = self.number[8:12]
+
+        return f"{p3}"
+
+    def number_p4(self):
+        p4 = self.number[12:16]
+
+        return f"{p4}"
+
     def get_bank(self):
         banks = {
             'MELI': '603799',

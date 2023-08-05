@@ -25,6 +25,16 @@
   font-family: "IBM Plex Sans";
 }
 
+.font-plex-mono {
+  direction: rtl;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.jet-brain {
+  direction: rtl;
+  font-family: "JetBrains Mono", monospace;
+}
+
 h1 {
   font-weight: 700;
   font-size: x-large;

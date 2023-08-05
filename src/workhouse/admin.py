@@ -15,6 +15,7 @@ class CutAdmin(admin.ModelAdmin):
         'model_name',
         'clothroll_count',
     ]
+    prepopulated_fields = {"slug": ("code", "date")}
 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(clothroll_count=Count("clothroll"))

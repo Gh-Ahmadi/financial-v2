@@ -72,21 +72,24 @@
     <div class="font-vazir grid grid-flow-col px-3 py-2">
         <div class="justify-self-start">اطلاعات پرداخت:</div>
     </div>
-    <div class="font-vazir grid grid-flow-col px-3 pt-2 pb-3">
+    <div class=" grid grid-flow-col px-3 pt-2 pb-3">
         <div class="grid grid-flow-col ">
-            <div class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 justify-self-center h-auto w-full shadow-xl rounded-[25px] p-3">
-                <div class="px-3 py-2">
-                    <div class="flex">
+            <div class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 justify-self-center h-auto w-full shadow-xl rounded-[15px] p-3">
+                <div class="px-3 py-2 ">
+                    <div class="font-vazir flex ">
+                        <div class="flex bg-white bg-opacity-50 rounded-[7px]">
                         <img class="h-9" src="{{ MEDIA_URL }}/media/bank-logo/{{ user.payment_card.get_bank }}.png" alt="{{ user.payment_card.get_bank }}">
-                        <p class="self-center text-lg pr-2">{{ user.payment_card.get_fa_bank  }}</p>
+                        <p class="self-center text-lg pr-2 pl-2">{{ user.payment_card.get_fa_bank  }}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="px-5 pt-7 pb-3">
-                    <div class="font-vazir-fadigit grid grid-cols-4 gap-2">
-                        <div class="font-semibold text-2xl text-center">{{ user.payment_card.fa_number_p1 }}</div>
-                        <div class="font-semibold text-2xl text-center">{{ user.payment_card.fa_number_p2 }}</div>
-                        <div class="font-semibold text-2xl text-center">{{ user.payment_card.fa_number_p3 }}</div>
-                        <div class="font-semibold text-2xl text-center">{{ user.payment_card.fa_number_p4 }}</div>
+                    <!-- <div class="font-vazir-fadigit grid grid-cols-4 gap-2"> -->
+                    <div class="jet-brain grid grid-cols-4 gap-2">
+                        <div class= text-2xl text-center">{{ user.payment_card.number_p1 }}</div>
+                        <div class= text-2xl text-center">{{ user.payment_card.number_p2 }}</div>
+                        <div class= text-2xl text-center">{{ user.payment_card.number_p3 }}</div>
+                        <div class= text-2xl text-center">{{ user.payment_card.number_p4 }}</div>
                     </div>
                 </div>
                 <div class="font-vazir grid grid-flow-col px-3 py-2">

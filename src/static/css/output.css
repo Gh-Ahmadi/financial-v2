@@ -1381,6 +1381,10 @@ select {
   height: calc(100% - 2rem);
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1635,6 +1639,14 @@ select {
   border-radius: 0.5rem;
 }
 
+.rounded-\[5px\] {
+  border-radius: 5px;
+}
+
+.rounded-\[7px\] {
+  border-radius: 7px;
+}
+
 .rounded-l-lg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -1792,13 +1804,28 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-blue-700 {
+  --tw-gradient-from: #1A56DB;
+  --tw-gradient-to: rgb(26 86 219 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-purple-400 {
   --tw-gradient-to: rgb(172 148 250 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #AC94FA, var(--tw-gradient-to);
 }
 
+.via-blue-800 {
+  --tw-gradient-to: rgb(30 66 159 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #1E429F, var(--tw-gradient-to);
+}
+
 .to-pink-400 {
   --tw-gradient-to: #F17EB8;
+}
+
+.to-gray-900 {
+  --tw-gradient-to: #111827;
 }
 
 .p-1 {
@@ -1823,6 +1850,14 @@ select {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-0\.5 {
+  padding: 0.125rem;
 }
 
 .px-2 {
@@ -1952,6 +1987,10 @@ select {
   text-align: right;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2042,6 +2081,14 @@ select {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-30 {
+  opacity: 0.3;
 }
 
 .shadow {

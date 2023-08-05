@@ -37,10 +37,10 @@ class CutUpdate(UpdateView):
     pk_url_kwarg = "pk"
 
 
-def CutDetail(request,  pk):
-    print(pk)
-    cloths = ClothRoll.objects.filter(cut_id=pk)
-    cut = Cut.objects.get(pk=pk)
+def CutDetail(request,  slug):
+    print(f"-----------------{slug}--------------")
+    cut = Cut.objects.get(slug=slug)
+    cloths = ClothRoll.objects.filter(cut_id=cut.pk)
     return render(request, "pages/workhouse/cut/detail.html", {'cut': cut, 'cloths': cloths})
 
 
